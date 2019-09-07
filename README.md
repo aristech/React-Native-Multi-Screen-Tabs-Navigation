@@ -20,8 +20,8 @@
 
 ## install
 
-- `git clone tabs`
-- `cd tabs`
+- `git clone https://github.com/aristech/React-Native-Multi-Screen-Tabs-Navigation.git`
+- `cd React-Native-Multi-Screen-Tabs-Navigation`
 - `npm install`
 
 ## development on a physical device
