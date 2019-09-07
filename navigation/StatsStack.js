@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {createStackNavigator} from 'react-navigation-stack';
+import React from "react";
+import PropTypes from "prop-types";
+import {createStackNavigator} from "react-navigation-stack";
 
 // screens
-import StatsScreen from '../screens/StatsScreen';
+import StatsScreen from "../screens/StatsScreen";
 
 // icons
-// import SvgStats from '../components/icons/Svg.Stats';
+import SvgStats from "../components/icons/Svg.Stats";
 
-// const StatsTabBarIcon = ({focused}) => <SvgStats active={focused} />;
-// StatsTabBarIcon.propTypes = {
-//   // required
-//   focused: PropTypes.bool.isRequired,
-// };
+const StatsTabBarIcon = ({focused}) => <SvgStats active={focused} />;
+StatsTabBarIcon.propTypes = {
+  // required
+  focused: PropTypes.bool.isRequired,
+};
 
 // Stats Stack
 // /////////////////////////////////////////////////////////////////////////////
@@ -22,8 +22,8 @@ const StatsStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      tabBarLabel: 'Stats',
-      // tabBarIcon: StatsTabBarIcon,
+      tabBarLabel: "Stats",
+      tabBarIcon: StatsTabBarIcon,
     },
   },
 );

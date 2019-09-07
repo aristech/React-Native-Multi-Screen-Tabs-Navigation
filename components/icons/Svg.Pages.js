@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Svg, { Path } from 'react-native-svg';
-import { useTheme } from 'react-navigation';
-import { colors } from '../../constants';
+import React from "react";
+import PropTypes from "prop-types";
+import Svg, {Path} from "react-native-svg";
+import {useTheme} from "react-navigation";
+import {colors} from "../../constants";
 
-const SvgPages = ({ active, size }) => {
+const SvgPages = ({active, size}) => {
   const theme = useTheme();
   const fill = active
     ? colors.activeTintColor[theme]
@@ -22,13 +22,13 @@ const SvgPages = ({ active, size }) => {
 
 SvgPages.defaultProps = {
   active: false,
-  size: 20
+  size: 20,
 };
 
 SvgPages.propTypes = {
   // optional
   active: PropTypes.bool,
-  size: PropTypes.number
+  size: PropTypes.number,
 };
 
 export default SvgPages;

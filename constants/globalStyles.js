@@ -1,5 +1,5 @@
-import colors from './colors';
-import fonts from './fonts';
+import colors from "./colors";
+import {pacifico, nanum} from "./fonts";
 
 // utility styles
 // /////////////////////////////////////////////////////////////////////////////
@@ -11,67 +11,71 @@ export default {
   container: {
     dark: {
       backgroundColor: colors.darkHighlightColor,
-      flex: 1
+      flex: 1,
     },
     light: {
       backgroundColor: colors.white,
-      flex: 1
-    }
+      flex: 1,
+    },
   },
   contentContainer: {
-    alignItems: 'center',
-    paddingTop: 32
+    alignItems: "center",
+    paddingTop: 32,
   },
 
   // navigation styles
   // ///////////////////////////////////////////////////////////////////////////
   headerTitleStyle: {
     flex: 1,
-    textAlign: 'center'
+    textAlign: "center",
   },
 
   // button
   // ///////////////////////////////////////////////////////////////////////////
   btn: {
-    alignItems: 'center',
+    alignItems: "center",
     backgroundColor: colors.darkColor,
     borderColor: colors.darkColor,
     borderWidth: 1,
     borderRadius: 4,
     height: 48,
-    justifyContent: 'center',
+    justifyContent: "center",
     marginBottom: 16,
     paddingHorizontal: 24,
-    paddingVertical: 8
+    paddingVertical: 8,
   },
   btnText: {
     color: colors.white,
-    textAlign: 'center'
+    textAlign: "center",
   },
 
   // text
   // ///////////////////////////////////////////////////////////////////////////
   text: {
     dark: {
-      color: colors.white
+      color: colors.white,
     },
     light: {
-      color: colors.darkColor
-    }
+      color: colors.darkColor,
+    },
   },
   textPacifico: {
-    fontFamily: fonts.pacifico,
-    fontSize: 20
+    fontFamily: pacifico,
+    fontSize: 20,
+  },
+  textNanum: {
+    fontFamily: nanum,
+    fontSize: 20,
   },
 
   // spacers
   // ///////////////////////////////////////////////////////////////////////////
   spacer16: {
     height: 16,
-    width: '100%'
+    width: "100%",
   },
   spacer64: {
     height: 64,
-    width: '100%'
-  }
+    width: "100%",
+  },
 };

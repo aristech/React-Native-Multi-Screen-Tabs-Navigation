@@ -1,10 +1,10 @@
 // app images
 // /////////////////////////////////////////////////////////////////////////////
 
-const rabbitDev = require('../assets/images/rabbit-dev.png');
-const rabbitProd = require('../assets/images/rabbit-prod.png');
+const reactDev = require("../assets/images/react-dev.png");
+const reactProd = require("../assets/images/react-prod.png");
 
 export default {
-  rabbitDev,
-  rabbitProd
+  reactDev,
+  reactProd,
 };

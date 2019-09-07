@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Svg, {Path} from 'react-native-svg';
-import {useTheme} from 'react-navigation';
-import {colors} from '../../constants';
+import React from "react";
+import PropTypes from "prop-types";
+import Svg, {Path} from "react-native-svg";
+import {useTheme} from "react-navigation";
+import {colors} from "../../constants";
 
 const SvgHome = ({active, size}) => {
   const theme = useTheme();

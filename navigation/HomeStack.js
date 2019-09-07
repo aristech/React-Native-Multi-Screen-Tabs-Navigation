@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {createStackNavigator} from 'react-navigation-stack';
+import React from "react";
+import PropTypes from "prop-types";
+import {createStackNavigator} from "react-navigation-stack";
 
 // screens
-import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from "../screens/HomeScreen";
 
 // icons
-import SvgHome from '../components/icons/Svg.Home';
+import SvgHome from "../components/icons/Svg.Home";
 
 const HomeTabBarIcon = ({focused}) => <SvgHome active={focused} />;
 HomeTabBarIcon.propTypes = {
@@ -22,7 +22,7 @@ const HomeStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      tabBarLabel: 'Home',
+      tabBarLabel: "Home",
       tabBarIcon: HomeTabBarIcon,
     },
   },

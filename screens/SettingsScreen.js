@@ -1,9 +1,9 @@
-import React from 'react';
-import { Image, ScrollView, Text, View } from 'react-native';
-import { useTheme } from 'react-navigation';
-import { gStyle, images } from '../constants';
+import React from "react";
+import {Image, ScrollView, Text, View} from "react-native";
+import {useTheme} from "react-navigation";
+import {gStyle, images} from "../constants";
 
-const headerImage = __DEV__ ? 'rabbitDev' : 'rabbitProd';
+const headerImage = __DEV__ ? "reactDev" : "reactProd";
 
 const SettingsScreen = () => {
   const theme = useTheme();
@@ -11,8 +11,7 @@ const SettingsScreen = () => {
   return (
     <ScrollView
       contentContainerStyle={gStyle.contentContainer}
-      style={gStyle.container[theme]}
-    >
+      style={gStyle.container[theme]}>
       <Text style={gStyle.text[theme]}>Settings content area</Text>
 
       <View style={gStyle.spacer16} />
@@ -20,40 +19,37 @@ const SettingsScreen = () => {
       <Text style={[gStyle.text[theme], gStyle.textPacifico]}>
         Pacifico font example
       </Text>
+      <Text style={[gStyle.text[theme], gStyle.textNanum]}>
+        δείγμα ελληνικής γραμματοσειράς
+      </Text>
     </ScrollView>
   );
 };
 
-SettingsScreen.navigationOptions = ({ theme }) => {
+SettingsScreen.navigationOptions = ({theme}) => {
   return {
     headerLeft: (
-      <View style={{ flex: 1, paddingLeft: 16 }}>
+      <View style={{flex: 1, paddingLeft: 16}}>
         <Text style={gStyle.text[theme]}>left</Text>
       </View>
     ),
     headerRight: (
-      <View style={{ flex: 1, paddingRight: 16 }}>
+      <View style={{flex: 1, paddingRight: 16}}>
         <Text style={gStyle.text[theme]}>right</Text>
       </View>
     ),
     headerTitle: (
-      <View style={{ flex: 1 }}>
+      <View style={{flex: 1}}>
         <Image
-          style={{ alignSelf: 'center', height: 40, width: 40 }}
+          style={{alignSelf: "center", height: 40, width: 40}}
           source={images[headerImage]}
         />
       </View>
-    )
+    ),
   };
 };
 
 /*
-// shoutout @notbrent: https://snack.expo.io/H105kxsG7
-const shouldShowBackButton = stackRouteNavigation => {
-  const parent = stackRouteNavigation.dangerouslyGetParent();
-  return parent.state.routes.indexOf(stackRouteNavigation.state) > 0;
-};
-
 SettingsScreen.navigationOptions = ({ navigation }) => ({
 
 headerLeft: !shouldShowBackButton(navigation) ? (

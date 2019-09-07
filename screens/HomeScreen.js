@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {ScrollView, Text, View} from 'react-native';
-import {useTheme} from 'react-navigation';
-import {gStyle} from '../constants';
+import React from "react";
+import PropTypes from "prop-types";
+import {ScrollView, Text, View} from "react-native";
+import {useTheme} from "react-navigation";
+import {gStyle} from "../constants";
 
 // components
-import Touch from '../components/Touch';
+import Touch from "../components/Touch";
 
 const HomeScreen = ({navigation, screenProps}) => {
   const theme = useTheme();
@@ -18,16 +18,16 @@ const HomeScreen = ({navigation, screenProps}) => {
         <View style={gStyle.spacer64} />
 
         <Touch
-          onPress={() => navigation.navigate('MultiBase')}
-          text="Jump to Multi tab"
+          onPress={() => navigation.navigate("MultiBase")}
+          text="Go to MultiScreen"
         />
 
         <Touch
-          onPress={() => screenProps.updateTheme('light')}
+          onPress={() => screenProps.updateTheme("light")}
           text="Light theme"
         />
         <Touch
-          onPress={() => screenProps.updateTheme('dark')}
+          onPress={() => screenProps.updateTheme("dark")}
           text="Dark theme"
         />
       </ScrollView>
@@ -37,7 +37,7 @@ const HomeScreen = ({navigation, screenProps}) => {
 
 HomeScreen.navigationOptions = {
   headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Home',
+  title: "Home",
 };
 
 HomeScreen.propTypes = {

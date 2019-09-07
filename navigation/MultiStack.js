@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {createStackNavigator} from 'react-navigation-stack';
+import React from "react";
+import PropTypes from "prop-types";
+import {createStackNavigator} from "react-navigation-stack";
 
 // screens
-import MultiBaseScreen from '../screens/MultiBaseScreen';
-import MultiLevel2Screen from '../screens/MultiLevel2Screen';
+import MultiBaseScreen from "../screens/MultiBaseScreen";
+import MultiLevel2Screen from "../screens/MultiLevel2Screen";
 
 // icons
-// import SvgPages from '../components/icons/Svg.Pages';
+import SvgPages from "../components/icons/Svg.Pages";
 
-// const MultiTabBarIcon = ({focused}) => <SvgPages active={focused} />;
-// MultiTabBarIcon.propTypes = {
-//   // required
-//   focused: PropTypes.bool.isRequired,
-// };
+const MultiTabBarIcon = ({focused}) => <SvgPages active={focused} />;
+MultiTabBarIcon.propTypes = {
+  // required
+  focused: PropTypes.bool.isRequired,
+};
 
 // Multi Stack
 // /////////////////////////////////////////////////////////////////////////////
@@ -24,8 +24,8 @@ const MultiStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      tabBarLabel: 'Multi',
-      // tabBarIcon: MultiTabBarIcon,
+      tabBarLabel: "MultiScreen",
+      tabBarIcon: MultiTabBarIcon,
     },
   },
 );
